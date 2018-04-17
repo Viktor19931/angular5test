@@ -19,13 +19,12 @@
           <a *ngFor="let item of items, let i = index"
              class="item"
              [class.active]="selectedIndex === i"
-             (click)="selectedItem(i)">
+             (click)="selectedItem(items.indexOf(item), i)">
             <p>{{ item.name }}
               <span class="comments-count">{{ item.comments.length }}</span>
             </p>
             <span class="btn-delete"
-                  (click)="deleteItem(i)">Delete
-            </span>
+                  (click)="deleteItem(i)">Delete</span>
           </a>
         </div>
       </div>

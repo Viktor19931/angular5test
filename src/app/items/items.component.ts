@@ -35,6 +35,8 @@ export class ItemsComponent implements OnInit, OnDestroy {
       this.item,
       []
     );
+    console.log(this.items);
+    this.service.items = this.service.items || [];
     this.service.addItem(newItem);
     this.item = null;
   }

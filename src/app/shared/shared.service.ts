@@ -18,6 +18,7 @@ export class SharedService {
     this.items.push(item);
     localStorage.setItem('items', JSON.stringify(this.items));
     this.itemsChange.next(this.items.slice());
+    console.log(this.items);
   }
 
   deleteItem(index: number) {
